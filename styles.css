@@ -1,74 +1,164 @@
-/* تنسيق النصوص */
+/* Reset default styles (optional, consider using Normalize.css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #333;
+  background-color: #f5f5f5;
 }
 
-/* تنسيق العناصر الرئيسية */
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
+  transition: color 0.3s ease;
 }
 
-/* تنسيق العنوان والقائمة */
+a:hover {
+  color: #007bff;
+}
+
+/* Header */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
+/* Navigation */
 nav {
-  background: #555;
-  color: #fff;
-  padding: 15px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 15px;
-  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
 }
 
 nav a:hover {
-  background: #444;
+  border-bottom: 2px solid #007bff;
 }
 
-/* تنسيق القسم الرئيسي */
-section#main {
-  padding: 20px 0;
-  background: #eaeaea;
+/* Responsive Navigation (For Mobile Devices) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack navigation items vertically */
+  }
+  nav a {
+    margin-bottom: 10px; /* Add spacing between links on mobile */
+  }
 }
 
-/* تنسيق البطاقات (العناصر) */
-.card {
-  flex: 1;
-  margin: 10px;
+/* Main Content */
+main {
   padding: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* تنسيق قسم "عني" */
-.about-me {
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Certificates Section */
+#certificates {
+  text-align: center;
+}
+
+.certificate-container {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.about-me img {
-  border-radius: 50%;
-  max-width: 150px;
+.certificate-container img {
+  width: 300px; /* Adjust width for larger screens */
+  height: auto;
+  margin: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.about-me div {
-  flex: 1;
+/* Responsive Images (For Mobile Devices) */
+@media (max-width: 768px) {
+  .certificate-container img {
+    width: 100%; /* Images take full width on mobile */
+  }
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#contact a:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
   padding: 20px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+#toggleCertificatesBtn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggleCertificatesBtn:hover {
+  background-color: #0056b3;
+}
+
+#toggleCertificatesBtn:focus {
+  outline: 2px solid #007bff; /* Adjust outline color */
 }
